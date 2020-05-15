@@ -8,8 +8,6 @@ app.get('/', (req: Request, res: Response) => {
     name: 'Marcelo Nogueira da Silva',
     age: 36,
     graduation: 'Computer Engineer',
-    test: 'aki',
-    reload: true,
   })
 })
 
