@@ -1,15 +1,15 @@
 import express from 'express'
-import { Request, Response } from 'express'
+import bodyParser from 'body-parser'
+import cors from 'cors'
+
+import routes from './routes'
 
 const app = express()
 
-app.get('/', (req: Request, res: Response) => {
-  res.status(200).json({
-    name: 'Marcelo Nogueira da Silva',
-    age: 36,
-    graduation: ['Computer Engineer', 'data scientist'],
-  })
-})
+app.use(bodyParser.json())
+app.use(cors())
+
+app.use('/api', routes)
 
 const port = 8000
 
