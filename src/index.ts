@@ -1,7 +1,7 @@
 import * as express from 'express'
 import { Request, Response } from 'express'
 
-const app = express()
+const app = express.default()
 
 app.get('/', (req: Request, res: Response) => {
   res.status(200).json({
