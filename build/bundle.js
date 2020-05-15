@@ -22,7 +22,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "5339b625f33504c598c8";
+/******/ 	var hotCurrentHash = "bb7f0b988fdf8fa19cbb";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -826,7 +826,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nexports.__esModule = true;\nvar express = __webpack_require__(/*! express */ \"express\");\nvar app = express();\napp.get('/', function (req, res) {\n    res.status(200).json({\n        name: 'Marcelo Nogueira da Silva',\n        age: 36,\n        graduation: 'Computer Engineer',\n    });\n});\nvar port = 8000;\napp.listen(port, function () { return console.log(\"server running on port: \" + port); });\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("\nexports.__esModule = true;\nvar express = __webpack_require__(/*! express */ \"express\");\nvar app = express[\"default\"]();\napp.get('/', function (req, res) {\n    res.status(200).json({\n        name: 'Marcelo Nogueira da Silva',\n        age: 36,\n        graduation: 'Computer Engineer',\n    });\n});\nvar port = 8000;\napp.listen(port, function () { return console.log(\"server running on port: \" + port); });\n\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ }),
 
