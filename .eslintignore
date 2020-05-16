@@ -10,3 +10,4 @@ dist
 *.lock
 webpack.*.*
 jest.config.js
+babel.config.js
