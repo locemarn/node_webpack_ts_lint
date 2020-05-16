@@ -3,7 +3,9 @@ const path = require("path");
 const nodeExternals = require('webpack-node-externals');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 
-const { NODE_ENV = "development" } = process.env;
+const {
+  NODE_ENV = "development"
+} = process.env;
 
 module.exports = {
   entry: "./src/index.ts",
@@ -15,24 +17,20 @@ module.exports = {
   target: "node",
 
   module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        use: ["ts-loader"],
-      },
-    ],
+    rules: [{
+      test: /\.ts$/,
+      use: ["ts-loader"],
+      exclude: /node_modules/
+    }, ],
   },
 
-  
-  
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
 
-  
-  externals: [ nodeExternals({
+  externals: [nodeExternals({
     whitelist: ["webpack/hot/poll?100"],
-  }) ],
+  })],
 
   plugins: [
     new WebpackShellPlugin({
